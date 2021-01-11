@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DAD.ogg-f5d36f45fca2ac931c63bb9b4b1d2200.oggstr"
+
+[deps]
+
+source_file="res://assets/DAD.ogg"
+dest_files=[ "res://.import/DAD.ogg-f5d36f45fca2ac931c63bb9b4b1d2200.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
