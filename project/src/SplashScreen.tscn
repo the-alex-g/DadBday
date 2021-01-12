@@ -15,7 +15,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 20.9 ),
-"transitions": PoolRealArray( 0.905096, 0.905096 ),
+"transitions": PoolRealArray( 0.710124, 0.710124 ),
 "update": 0,
 "values": [ Vector2( 513.702, 1061.77 ), Vector2( 513.702, 200 ) ]
 }
@@ -27,7 +27,7 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 20.9 ),
-"transitions": PoolRealArray( 0.905096, 0.905096 ),
+"transitions": PoolRealArray( 0.710124, 0.710124 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.04, 0.04 ) ]
 }
@@ -38,7 +38,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 14 ),
+"times": PoolRealArray( 12.2 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -66,8 +66,8 @@ __meta__ = {
 }
 
 [node name="ScrollingText2" type="Sprite" parent="."]
-position = Vector2( 513.702, 453.296 )
-scale = Vector2( 0.322168, 0.322168 )
+position = Vector2( 513.702, 450.836 )
+scale = Vector2( 0.319428, 0.319428 )
 texture = ExtResource( 2 )
 
 [node name="starfield-top" type="Sprite" parent="."]

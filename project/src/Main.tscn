@@ -577,7 +577,6 @@ position = Vector2( 1145.05, 210.29 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 2
 playing = true
 flip_h = true
 
@@ -591,7 +590,7 @@ script = ExtResource( 8 )
 pause_mode = 1
 visible = false
 position = Vector2( 1065.24, 190.306 )
-rotation = 2.86328
+rotation = 2.53766
 scale = Vector2( 0.5, 0.5 )
 loop = false
 lookahead = 45.0
@@ -601,7 +600,7 @@ position = Vector2( -65.9036, -2.39221 )
 rotation = -3.30914
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 1
+frame = 3
 playing = true
 flip_h = true
 
@@ -611,7 +610,6 @@ position = Vector2( 457, 288.188 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 2
 playing = true
 
 [node name="MountainFront" type="Sprite" parent="."]
@@ -649,7 +647,6 @@ scale = Vector2( 0.7, 0.7 )
 z_index = 4
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 2
 playing = true
 flip_h = true
 
@@ -661,5 +658,4 @@ position = Vector2( -246.565, 137.491 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 2
 playing = true
