@@ -333,7 +333,7 @@ tracks/26/loop_wrap = true
 tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = {
-"times": PoolRealArray( 0, 12.3, 18.2 ),
+"times": PoolRealArray( 0, 12.3, 19.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -361,6 +361,18 @@ tracks/28/keys = {
 "transitions": PoolRealArray( 3.4822, 3.4822 ),
 "update": 0,
 "values": [ Vector2( 525, 300 ), Vector2( 525, 350 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("bdayletters:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 12.4, 17.8, 18.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="SpriteFrames" id=2]
@@ -565,7 +577,6 @@ position = Vector2( 459.248, 290.527 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 1
 playing = true
 flip_h = true
 
@@ -589,16 +600,15 @@ position = Vector2( -65.9036, -2.39221 )
 rotation = -3.30914
 frames = SubResource( 7 )
 animation = "Flying"
+frame = 3
 playing = true
 flip_h = true
 
 [node name="DragonOutOfCave" type="AnimatedSprite" parent="."]
-position = Vector2( 1138.84, 485.628 )
-scale = Vector2( 0.7, 0.7 )
-z_index = 4
+position = Vector2( 870.354, 371.129 )
+scale = Vector2( 0.522222, 0.522222 )
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 1
 playing = true
 
 [node name="MountainFront" type="Sprite" parent="."]
@@ -610,8 +620,9 @@ __meta__ = {
 
 [node name="bdayletters" type="Sprite" parent="."]
 visible = false
-position = Vector2( 525, 345.335 )
-scale = Vector2( 0.906705, 0.906705 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 525, 349.705 )
+scale = Vector2( 0.994108, 0.994108 )
 texture = ExtResource( 9 )
 
 [node name="Fire" type="AnimatedSprite" parent="."]
@@ -629,11 +640,13 @@ frame = 28
 playing = true
 
 [node name="DragonLandsNearWater" type="AnimatedSprite" parent="."]
-position = Vector2( 251.849, 468.745 )
+visible = false
+position = Vector2( 1142.25, 485.633 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 4
 frames = SubResource( 7 )
 animation = "Flying"
+frame = 1
 playing = true
 flip_h = true
 
@@ -645,5 +658,4 @@ position = Vector2( -246.565, 137.491 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 1
 playing = true
