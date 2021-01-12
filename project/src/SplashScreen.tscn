@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/SplashScreen.gd" type="Script" id=1]
+[ext_resource path="res://assets/midground.png" type="Texture" id=2]
+[ext_resource path="res://assets/foreground.png" type="Texture" id=3]
+[ext_resource path="res://assets/scene.png" type="Texture" id=4]
+[ext_resource path="res://assets/ScrollingText.png" type="Texture" id=5]
+[ext_resource path="res://assets/starfield-back.png" type="Texture" id=6]
+[ext_resource path="res://assets/starfield-top.png" type="Texture" id=7]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -20,3 +26,38 @@ margin_top = -7.0
 margin_right = 86.7183
 margin_bottom = 7.0
 text = "Press anywhere to continue"
+
+[node name="starfield-back" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mountain" type="Node" parent="."]
+
+[node name="midground" type="Sprite" parent="Mountain"]
+visible = false
+texture = ExtResource( 2 )
+centered = false
+
+[node name="scene" type="Sprite" parent="Mountain"]
+visible = false
+texture = ExtResource( 4 )
+centered = false
+
+[node name="foreground" type="Sprite" parent="Mountain"]
+visible = false
+texture = ExtResource( 3 )
+centered = false
+
+[node name="ScrollingText" type="Sprite" parent="."]
+position = Vector2( 544.925, 753.255 )
+texture = ExtResource( 5 )
+
+[node name="starfield-top" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
