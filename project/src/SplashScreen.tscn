@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 20.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 544.925, 753.255 ), Vector2( 533.628, 218.706 ) ]
+"values": [ Vector2( 544.925, 808.255 ), Vector2( 533.628, 218.706 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("ScrollingText:scale")
@@ -53,8 +53,7 @@ __meta__ = {
 }
 
 [node name="ScrollingText" type="Sprite" parent="."]
-position = Vector2( 530.654, 275.194 )
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( 544.925, 808.255 )
 texture = ExtResource( 5 )
 
 [node name="starfield-top" type="Sprite" parent="."]
