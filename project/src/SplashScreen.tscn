@@ -1,31 +1,49 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/SplashScreen.gd" type="Script" id=1]
-[ext_resource path="res://assets/midground.png" type="Texture" id=2]
-[ext_resource path="res://assets/foreground.png" type="Texture" id=3]
-[ext_resource path="res://assets/scene.png" type="Texture" id=4]
 [ext_resource path="res://assets/ScrollingText.png" type="Texture" id=5]
 [ext_resource path="res://assets/starfield-back.png" type="Texture" id=6]
 [ext_resource path="res://assets/starfield-top.png" type="Texture" id=7]
 
+[sub_resource type="Animation" id=1]
+resource_name = "text"
+length = 21.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollingText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 544.925, 753.255 ), Vector2( 533.628, 218.706 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollingText:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 20.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.0371422, 0.0396677 ) ]
+}
+
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -0.594604
+margin_top = 1.78381
+margin_right = -0.594604
+margin_bottom = 1.78381
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -90.2817
-margin_top = -7.0
-margin_right = 86.7183
-margin_bottom = 7.0
-text = "Press anywhere to continue"
 
 [node name="starfield-back" type="Sprite" parent="."]
 texture = ExtResource( 6 )
@@ -34,25 +52,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Mountain" type="Node" parent="."]
-
-[node name="midground" type="Sprite" parent="Mountain"]
-visible = false
-texture = ExtResource( 2 )
-centered = false
-
-[node name="scene" type="Sprite" parent="Mountain"]
-visible = false
-texture = ExtResource( 4 )
-centered = false
-
-[node name="foreground" type="Sprite" parent="Mountain"]
-visible = false
-texture = ExtResource( 3 )
-centered = false
-
 [node name="ScrollingText" type="Sprite" parent="."]
-position = Vector2( 544.925, 753.255 )
+position = Vector2( 530.654, 275.194 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 5 )
 
 [node name="starfield-top" type="Sprite" parent="."]
@@ -61,3 +63,7 @@ centered = false
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/text = SubResource( 1 )
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
