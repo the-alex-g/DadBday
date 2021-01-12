@@ -12,7 +12,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "dragon"
-length = 32.0
+length = 26.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Fire2:position")
@@ -153,7 +153,7 @@ tracks/11/loop_wrap = false
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 13.8, 16.2, 18.1, 21.5 ),
+"times": PoolRealArray( 13.8, 16.2, 18.1, 20.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 457, 288.188 ), Vector2( 459.248, 290.527 ), Vector2( 646.615, 275.713 ), Vector2( 1138.84, 485.628 ) ]
@@ -165,7 +165,7 @@ tracks/12/loop_wrap = false
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 13.8, 17.6, 21.5 ),
+"times": PoolRealArray( 13.8, 17.6, 20.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.3, 0.3 ), Vector2( 0.3, 0.3 ), Vector2( 0.7, 0.7 ) ]
@@ -183,73 +183,73 @@ tracks/13/keys = {
 "values": [ 0, 0, 4 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("DragonBigLeft:flip_h")
+tracks/14/path = NodePath("DragonLandsNearWater:flip_h")
 tracks/14/interp = 1
 tracks/14/loop_wrap = false
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 22.5 ),
+"times": PoolRealArray( 21.3 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("DragonBigLeft:position")
+tracks/15/path = NodePath("DragonLandsNearWater:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = false
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 22.3, 22.5, 26.2, 26.5, 28.8, 29.1, 30.3 ),
+"times": PoolRealArray( 21.1, 21.3, 23, 23.3, 24.4, 24.7, 25.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1.18921, 1.18921, 1.18921 ),
 "update": 0,
 "values": [ Vector2( 1142.25, 485.633 ), Vector2( 1138.84, 485.628 ), Vector2( 310.971, 440.401 ), Vector2( 251.849, 468.745 ), Vector2( 251.849, 468.745 ), Vector2( 220.298, 447.471 ), Vector2( -183.484, 309.845 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("DragonBigLeft:animation")
+tracks/16/path = NodePath("DragonLandsNearWater:animation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = false
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 22.5 ),
+"times": PoolRealArray( 21.3 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "Flying" ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("DragonBigLeft:playing")
+tracks/17/path = NodePath("DragonLandsNearWater:playing")
 tracks/17/interp = 1
 tracks/17/loop_wrap = false
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 22.5, 26.5, 28.8, 28.9 ),
+"times": PoolRealArray( 21.3, 23.3, 24.4, 24.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, false, true ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("DragonBigLeft:frame")
+tracks/18/path = NodePath("DragonLandsNearWater:frame")
 tracks/18/interp = 1
 tracks/18/loop_wrap = false
 tracks/18/imported = false
 tracks/18/enabled = true
 tracks/18/keys = {
-"times": PoolRealArray( 26.5, 28.9 ),
+"times": PoolRealArray( 23.3, 24.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 0, 1 ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("DragonBigLeft:visible")
+tracks/19/path = NodePath("DragonLandsNearWater:visible")
 tracks/19/interp = 1
 tracks/19/loop_wrap = false
 tracks/19/imported = false
 tracks/19/enabled = true
 tracks/19/keys = {
-"times": PoolRealArray( 0, 22.3 ),
+"times": PoolRealArray( 0, 21.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -395,130 +395,130 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Curve2D" id=38]
+[sub_resource type="Curve2D" id=8]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1065.24, 190.306, 36.6266, -15.7854, -36.6266, 15.7854, 935.771, 271.95, 66.0065, 16.2994, -66.0065, -16.2994, 778.106, 299.745, 34.5583, 9.46951, -34.5583, -9.46951, 619.69, 277.782, 0, 0, 0, 0, 471.947, 284.21, 0, 0, 0, 0, 435.105, 284.21 )
 }
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 0, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
 region = Rect2( 256, 0, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
 region = Rect2( 384, 0, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 88, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 88, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 2 )
 region = Rect2( 256, 88, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 2 )
 region = Rect2( 384, 88, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 176, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 176, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 2 )
 region = Rect2( 256, 176, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=20]
 atlas = ExtResource( 2 )
 region = Rect2( 384, 176, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 264, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 264, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 2 )
 region = Rect2( 256, 264, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 2 )
 region = Rect2( 384, 264, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 352, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=26]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 352, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=27]
 atlas = ExtResource( 2 )
 region = Rect2( 256, 352, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=28]
 atlas = ExtResource( 2 )
 region = Rect2( 384, 352, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=29]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 440, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=30]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 440, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=31]
 atlas = ExtResource( 2 )
 region = Rect2( 256, 440, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=31]
+[sub_resource type="AtlasTexture" id=32]
 atlas = ExtResource( 2 )
 region = Rect2( 384, 440, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=33]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 528, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=34]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 528, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=35]
 atlas = ExtResource( 2 )
 region = Rect2( 256, 528, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=36]
 atlas = ExtResource( 2 )
 region = Rect2( 384, 528, 128, 88 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=37]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 616, 128, 88 )
 
-[sub_resource type="SpriteFrames" id=37]
+[sub_resource type="SpriteFrames" id=38]
 animations = [ {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
 "loop": false,
 "name": "default",
 "speed": 20.0
@@ -549,10 +549,12 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "dragon"
+playback_speed = 1.25
 anims/dragon = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimationPlayer"]
 stream = ExtResource( 5 )
+autoplay = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="AnimationPlayer"]
 frames = SubResource( 2 )
@@ -570,13 +572,13 @@ flip_h = true
 [node name="DragonPathToCave" type="Node2D" parent="."]
 
 [node name="Path2D" type="Path2D" parent="DragonPathToCave"]
-curve = SubResource( 38 )
+curve = SubResource( 8 )
 script = ExtResource( 8 )
 
 [node name="CavePath" type="PathFollow2D" parent="DragonPathToCave/Path2D"]
 pause_mode = 1
 position = Vector2( 1065.24, 190.306 )
-rotation = 2.86329
+rotation = 2.86328
 scale = Vector2( 0.3, 0.3 )
 offset = 662.007
 loop = false
@@ -608,32 +610,30 @@ __meta__ = {
 
 [node name="bdayletters" type="Sprite" parent="."]
 visible = false
-position = Vector2( 525, 349.438 )
-scale = Vector2( 0.988763, 0.988763 )
+position = Vector2( 525, 345.335 )
+scale = Vector2( 0.906705, 0.906705 )
 texture = ExtResource( 9 )
 
 [node name="Fire" type="AnimatedSprite" parent="."]
 position = Vector2( 695.837, 191.217 )
 scale = Vector2( 0.549565, 0.549565 )
-frames = SubResource( 37 )
+frames = SubResource( 38 )
 frame = 28
 playing = true
 
 [node name="Fire2" type="AnimatedSprite" parent="."]
 position = Vector2( 347.898, 345.579 )
 scale = Vector2( 0.549565, 0.549565 )
-frames = SubResource( 37 )
+frames = SubResource( 38 )
 frame = 28
 playing = true
 
-[node name="DragonBigLeft" type="AnimatedSprite" parent="."]
-visible = false
-position = Vector2( 1142.25, 485.633 )
+[node name="DragonLandsNearWater" type="AnimatedSprite" parent="."]
+position = Vector2( 251.849, 468.745 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 4
 frames = SubResource( 7 )
 animation = "Flying"
-frame = 3
 playing = true
 flip_h = true
 
