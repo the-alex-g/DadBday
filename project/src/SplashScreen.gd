@@ -1,14 +1,14 @@
 extends Control
 
+var click := false
 
 func _ready():
-	Input.action_press("Fakeout")
 	$AnimationPlayer.play("text")
 
-func _process(_delta):
-	if Input.is_action_just_pressed("Fakeout"):
+func _input(event):
+	if event is InputEventMouseButton and click:
 		OS.window_fullscreen = true
-		Input.action_release("Fakeout")
+		var _error = get_tree().change_scene("res://src/Main.tscn")
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	var _error = get_tree().change_scene("res://src/Main.tscn")
+	click = true
