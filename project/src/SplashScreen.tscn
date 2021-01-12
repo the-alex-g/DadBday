@@ -1,15 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/SplashScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/ScrollingText2.png" type="Texture" id=2]
-[ext_resource path="res://assets/ScrollingText.png" type="Texture" id=5]
 [ext_resource path="res://assets/starfield-back.png" type="Texture" id=6]
 [ext_resource path="res://assets/starfield-top.png" type="Texture" id=7]
 
-[sub_resource type="Animation" id=2]
-length = 22.0
+[sub_resource type="Animation" id=1]
+length = 21.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScrollingText:scale")
+tracks/0/path = NodePath("ScrollingText2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -18,67 +17,33 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 20.9 ),
 "transitions": PoolRealArray( 0.16, 0.16 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.0371422, 0.0396677 ) ]
+"values": [ Vector2( 513.702, 1061.77 ), Vector2( 513.702, 200 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ScrollingText:position")
+tracks/1/path = NodePath("ScrollingText2:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 20.9 ),
-"transitions": PoolRealArray( 0.164939, 0.164939 ),
+"transitions": PoolRealArray( 0.16, 0.16 ),
 "update": 0,
-"values": [ Vector2( 544.925, 808.255 ), Vector2( 533.628, 218.706 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.04, 0.04 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("Label:visible")
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 20.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Label:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 20.9, 22 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ScrollingText2:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 20.9 ),
-"transitions": PoolRealArray( 0.16, 0.16 ),
-"update": 0,
-"values": [ Vector2( 513.702, 1061.77 ), Vector2( 513.702, 200 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ScrollingText2:scale")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 20.9 ),
-"transitions": PoolRealArray( 0.16, 0.16 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.04, 0.04 ) ]
+"times": PoolRealArray( 3.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_continue"
+} ]
 }
 
 [node name="Control" type="Control"]
@@ -100,15 +65,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScrollingText" type="Sprite" parent="."]
-visible = false
-position = Vector2( 536.744, 381.323 )
-scale = Vector2( 0.292377, 0.294233 )
-texture = ExtResource( 5 )
-
 [node name="ScrollingText2" type="Sprite" parent="."]
-position = Vector2( 513.702, 428.438 )
-scale = Vector2( 0.294477, 0.294477 )
+position = Vector2( 513.702, 1061.77 )
 texture = ExtResource( 2 )
 
 [node name="starfield-top" type="Sprite" parent="."]
@@ -119,21 +77,4 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/text = SubResource( 2 )
-
-[node name="Label" type="Label" parent="."]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -88.5
-margin_top = -7.0
-margin_right = 88.5
-margin_bottom = 7.0
-text = "Press anywhere to continue"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+anims/text = SubResource( 1 )
